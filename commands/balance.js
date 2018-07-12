@@ -10,7 +10,6 @@ module.exports = {
 				return msg.channel.send(`Error: ${error.message}`);
 			}
 
-			console.log(data);
 			msg.reply(`\`\`\`Your available account balance is ${data.data.available_balance}.\nYour pending received balance is ${data.data.pending_received_balance}.\`\`\``);
 		});
 	},	

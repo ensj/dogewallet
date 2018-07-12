@@ -10,7 +10,7 @@ module.exports = {
 			}
 
 			msg.reply('an account has been created under your id!');
-			console.log(`Account created for ${msg.author.username}`);
+			console.log(`Account created for \x1b[32m${msg.author.username}\x1b[0m`);
 		});
 	},	
 };
