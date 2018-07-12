@@ -5,12 +5,12 @@ module.exports = {
 	execute(msg, args, block_io) {
 		block_io.get_new_address({'label': `${msg.author.id}`}, (error, data) => {
 			if(error) {
-				console.log(`Error occurred: ${error.message}`);
-				return msg.channel.send(`Error: ${error.message}`);
+				console.log(`\x1b[31mCreate(${msg.author.username}): Error occurred: ${error.message}\x1b[0m`);
+				return msg.channel.send(`Failed to create user account for ${msg.author.username}.\nError: ${error.message}`);
 			}
 
 			msg.reply('an account has been created under your id!');
-			console.log(`Account created for \x1b[32m${msg.author.username}\x1b[0m`);
+			console.log(`\x1b[32mAccount created for ${msg.author.username}\x1b[0m`);
 		});
 	},	
 };
