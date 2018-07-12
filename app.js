@@ -1,6 +1,13 @@
 
 const fs = require('fs');
 const {prefix, token} = require('./config.json');
+
+const BlockIo = require('block_io');
+const SECRETPIN = 'jhl981202';
+const DOGEKEY = 'd848-de89-c3cd-f1eb';
+const version = 2;
+const block_io = new BlockIo(DOGEKEY, SECRETPIN, version);
+
 const discord = require('discord.js');
 const client = new discord.Client();
 client.commands = new discord.Collection();
@@ -17,6 +24,8 @@ const cooldowns = new discord.Collection();
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 });
+
+client.on('error', console.error);
 
 client.on('message', msg => {
 	if(!msg.content.startsWith(`${prefix}`) || msg.author.bot) return;
@@ -52,7 +61,7 @@ client.on('message', msg => {
 
 	if(!timestamps.has(msg.author.id)) {
 		timestamps.set(msg.author.id, now);
-		setTimeOut(() => timestamps.delete(msg.author.id), cooldownAmount);
+		setTimeout(() => timestamps.delete(msg.author.id), cooldownAmount);
 	}else {
 		const experationTime = timestamps.get(msg.author.id) + cooldownAmount;
 
@@ -62,11 +71,11 @@ client.on('message', msg => {
 		}
 
 		timestamps.set(msg.author.id, now);
-		setTimeOut(() => timestamps.delete(msg.author.id), cooldownAmount);
+		setTimeout(() => timestamps.delete(msg.author.id), cooldownAmount);
 	}
 
 	try {
-		command.execute(msg, args);
+		command.execute(msg, args, block_io);
 	}catch(error) {
 		console.error(error);
 		msg.reply('There was an error executing that command!');

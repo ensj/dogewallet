@@ -9,6 +9,10 @@
   "author": "ensj",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "async-limiter": "^1.0.0",
+    "block_io": "^1.0.9",
+    "discord.js": "^11.3.2",
+    "erlpack": "github:discordapp/erlpack",
+    "node-opus": "^0.3.0"
   }
 }
