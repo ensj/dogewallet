@@ -6,6 +6,8 @@ module.exports = {
 	args: true,
 	usage: '[user] [amount]',
 	execute(msg, args, block_io) {
+		if(!Number.isInteger(args[1])) return msg.reply('that\'s an invalid amount!');
+		
 		var taggedUser = msg.mentions.users.first();
 		block_io.withdraw_from_labels(
 			{'amounts': `${args[1]}`, 'from_labels': `${msg.author.id}`, 'to_labels': `${taggedUser.id}`}, 
