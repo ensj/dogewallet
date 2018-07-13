@@ -1,12 +1,10 @@
 
 const fs = require('fs');
-const {prefix, token} = require('./config.json');
+const {prefix, token, dogekey, secret} = require('./config.json');
 
 const BlockIo = require('block_io');
-const SECRETPIN = 'jhl981202';
-const DOGEKEY = 'd848-de89-c3cd-f1eb';
 const version = 2;
-const block_io = new BlockIo(DOGEKEY, SECRETPIN, version);
+const block_io = new BlockIo(dogekey, secret, version);
 
 const discord = require('discord.js');
 const client = new discord.Client();
