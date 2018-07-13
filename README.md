@@ -1,1 +1,1 @@
-#DogeWallet - A Discord Bot for Dogecoin 
+# DogeWallet - A Discord Bot for Dogecoin 
