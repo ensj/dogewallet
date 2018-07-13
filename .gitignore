@@ -1,1 +1,5 @@
+#configurations and API keys
 config.json
+
+#dependencies
+node_modules/
