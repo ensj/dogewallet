@@ -7,14 +7,14 @@ This Discord bot was created with block.io's API and discord.js! It's licensed u
 
 Make sure to install/create the files required to run this bot first, though. Here is a list of files/folders that have been omitted from the repo.
 
-###node_modules/
+**node_modules/**
 ```
 A simple npm init would install most of the required files.
 npm install discord.js should install files required for a discord bot.
 npm install block_io should allow your bot to use the block.io API.
 ``` 
 
-###config.json
+**config.json**
 ```
 {
 	"prefix":"whatever prefix you'd like to use for the bot",
