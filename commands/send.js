@@ -18,7 +18,7 @@ module.exports = {
 				}
 
 				console.log(`${msg.author.username} withdrew ${data.data.amount_withdrawn} to ${taggedUser.username}.`);
-				msg.channel.send(`\`${args[1]}\` coin(s) successfully sent to ${taggedUser.username} with a fee of 1 coin!`);
+				msg.channel.send(`\`${args[1]}\` coin(s) successfully sent to ${taggedUser.username} with a transaction fee of 1 coin!`);
 			}
 		);
 	},	

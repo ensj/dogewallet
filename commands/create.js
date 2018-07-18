@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'create',
 		cooldown: 5,
-	description: 'Create a new dogecoin wallet, hekin wow!',
+	description: 'Create a new dogecoin wallet.',
 	execute(msg, args, block_io) {
 		block_io.get_new_address({'label': `${msg.author.id}`}, (error, data) => {
 			if(error) {

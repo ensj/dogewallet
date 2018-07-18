@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'address',
 		cooldown: 5,
-	description: 'Find out the address of your, or other users\'s account.',
+	description: 'Find out the wallet address of your, or other users\'s account.',
 	usage: '[(optional) user ping]',
 	execute(msg, args, block_io) {
 		var label;

@@ -21,6 +21,8 @@ const cooldowns = new discord.Collection();
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
+	console.log(`The bot is currently operating in ${client.user.getCurrentUserGuilds().length} servers.`);
+	client.user.setStatus('idle');
 });
 
 client.on('error', console.error);
