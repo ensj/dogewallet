@@ -21,11 +21,18 @@ const cooldowns = new discord.Collection();
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
-	console.log(`The bot is currently operating in ${client.user.getCurrentUserGuilds().length} servers.`);
-	client.user.setStatus('idle');
+	console.log(`The bot is currently operating in ${client.guilds.size} servers.`);
+	client.user.setPresence({ game: { name: `say $help` }, status: 'online' }).catch(console.error);
 });
 
 client.on('error', console.error);
+
+client.on('guildCreate', (Guild) => {
+	console.log(`Joined server \"${Guild.name}\".`);
+});
+client.on('guildDelete', () => {
+
+})
 
 client.on('message', msg => {
 	if(!msg.content.startsWith(`${prefix}`) || msg.author.bot) return;
