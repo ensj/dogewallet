@@ -30,9 +30,9 @@ client.on('error', console.error);
 client.on('guildCreate', (Guild) => {
 	console.log(`Joined server \"${Guild.name}\".`);
 });
-client.on('guildDelete', () => {
-
-})
+client.on('guildDelete', (Guild) => {
+	console.log(`Left server \"${Guild.name}\".`);
+});
 
 client.on('message', msg => {
 	if(!msg.content.startsWith(`${prefix}`) || msg.author.bot) return;
