@@ -1,5 +1,5 @@
 # DogeWallet - A Discord Bot for Dogecoin 
-* [Try inviting the bot to your server!](https://discordapp.com/api/oauth2/authorize?client_id=466402935186784266&permissions=0&scope=bot)
+* [Try inviting the bot to your server!](https://discordapp.com/api/oauth2/authorize?client_id=466402935186784266&permissions=0&scope=bot) Type $help to get started.
 
 ## Getting started
 
