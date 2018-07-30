@@ -1,5 +1,6 @@
 # DogeWallet - A Discord Bot for Dogecoin 
 * [Try inviting the bot to your server!](https://discordapp.com/api/oauth2/authorize?client_id=466402935186784266&permissions=0&scope=bot) Type $help to get started.
+
 DogeWallet is a discord bot that creates and manages dogecoin wallets for discord users. Users can transfer funds from their account to any user in discord, or any address outside of discord with their dogecoins. Try it yourself!
 
 ## Getting started
